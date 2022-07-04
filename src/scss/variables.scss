@@ -1,0 +1,58 @@
+//    sizes and indents    //
+$container     : 1300px;
+
+$indent-mobile : 15px;
+$indent-desktop: 20px;
+
+//          media          //
+$desktop: 1300px + 100;
+$tablet : 768px;
+
+$min-desktop: $desktop;
+$max-desktop: $desktop - 1;
+$min-tablet : $tablet;
+$max-tablet : $tablet - 1;
+
+//          fonts          //
+$font-family: Gilroy, "Arial", sans-serif;
+// $font-family-2    : "Arial", sans-serif;
+$font-size  : 1rem;
+$line-height: 1.5;
+
+//          color          //
+$color      : #fff;
+$dark-color : #fff;
+$light-color: #fff;
+$color-body : #fff;
+
+$color-text      : #fff;
+$dark-color-text : #fff;
+$light-color-text: #fff;
+//         another         //
+
+//          mixins         //
+@mixin flex( $fx-direction, $fx-justify: flex-start ) {
+	display        : flex;
+	flex-direction : $fx-direction;
+	justify-content: $fx-justify;
+}
+
+@mixin reset-indent {
+	margin : 0;
+	padding: 0;
+}
+
+@mixin reset-list {
+	margin    : 0;
+	padding   : 0;
+	list-style: none;
+}
+
+//function
+@function z( $layer ) {
+	@return map-get( $z-indexes, $layer );
+}
+
+$z-indexes: (
+	'focus'              : 99,
+);
