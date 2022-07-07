@@ -1,0 +1,210 @@
+.navbar {
+	position: relative;
+}
+
+.navbar__container {
+	box-sizing      : border-box;
+	transition      : .5s;
+	background-color: $color-body;
+
+	
+	@media (max-width: $max-desktop) {
+		position: fixed;
+		top     : 0;
+		right   : 0;
+		bottom  : 0;
+		left    : 0;
+		width   : 100%;
+		height  : 100%;
+		padding : 1rem 1.44rem;
+	}
+	@media (max-width: $max-desktop) {
+
+		&_close {
+			transition: .5s;
+			transform : translateX(200%);
+		}
+	}
+	
+	@media (min-width: $min-desktop) {
+		bottom: auto;
+		height: auto;
+	}
+}
+
+.navbar__menu {
+	height: 100%;
+}
+
+.navbar__button-toggle {
+	position        : absolute;
+	z-index         : 5;
+	top             : 1.4rem;
+	right           : 0;
+	width           : calc(1.89rem * 1.24);
+	height          : calc(1.89rem * 1.24);
+	margin          : 1rem 1.44rem;
+	transition      : .3;
+	border          : none;
+	border-radius   : 0;
+	background-color: $color-body;
+	
+	@media (min-width: $min-desktop) {
+		display: none;
+	}
+
+	& i {
+		position        : relative;
+		display         : block;
+		width           : 100%;
+		height          : 0.22rem;
+		background-color: $color-text;
+
+		&::before,
+		&::after {
+			position        : absolute;
+			top             : -0.44rem;
+			left            : 0;
+			display         : block;
+			width           : 100%;
+			height          : 0.22rem;
+			content         : "";
+			transition      : .3s;
+			background-color: $color-text;
+		}
+
+		&::after {
+			top   : unset;
+			bottom: -0.44rem;
+		}
+	}
+}
+
+
+.navbar__button-toggle_close {
+	transition      : .3;
+
+	& i {
+		background-color: transparent;
+	
+		&:before {
+			transform       : translateY(200%) rotate(45deg);
+			background-color: $light-color-text;
+		}
+
+		&:after {
+			transform       : translateY(-200%) rotate(-45deg);
+			background-color: $light-color-text;
+		}
+	}
+}
+
+.navbar__list {
+	@include reset-list;
+	
+	@media (min-width: $min-desktop) {
+		@include flex(row, stretch);
+
+		border-bottom: 1px solid $light-color-text;
+	}
+}
+
+.navbar__item {
+	width: 20%;
+	
+	&:focus,
+	&:hover {
+		box-shadow: none;
+	}
+}
+
+.navbar__button {
+	display         : block;
+	padding         : 1.38rem 0;
+	text-decoration : none;
+	font-size       : 1.89rem;
+	font-weight     : bold;
+	line-height     : 1.24;
+	color           : $light-color-text;
+	background-color: $color-body;
+
+	
+	@media (min-width: $min-desktop) {
+		font-size : 1rem;
+		text-align: center;
+	}
+
+	.navbar__item:first-child & {
+		text-align: left;
+	}
+
+	.navbar__item:last-child & {
+		text-align: right;
+	}
+	
+	&:focus,
+	&:hover {
+		box-shadow : none;
+		text-shadow: 0 0 3px $light-color-text;
+	}
+	
+	&:active {
+		color: $color-text;
+	}
+
+	&_active {
+		color      : $color-text;
+		
+		&:focus,
+		&:hover {
+			text-shadow: none;
+		}
+	}
+}
+
+.navbar__list_language {
+
+	position : absolute;
+	top      : 100vh;
+	right    : 0;
+	transform: rotate(90deg) translate(-100%, -2.1rem);
+	@include reset-list;
+	
+	@media (min-width: $min-desktop) {
+	
+		border   : none;
+		top      : auto;
+		bottom   : 2rem;
+		transform: rotate(-90deg) translate(-140%, 50%);
+	}
+}
+
+.navbar__item_language {
+	position      : relative;
+	display       : inline-block;
+	margin-right  : 1rem;
+	text-transform: uppercase;
+	
+	@media (min-width: $min-desktop) {
+		margin-right: 0.95rem;
+	}
+
+	&:not(:last-child)::after {
+		position        : absolute;
+		top             : 1.85rem;
+		right           : -0.7rem;
+		display         : block;
+		width           : 0.22rem;
+		height          : 1.8rem;
+		content         : "";
+		background-color: $color-text;
+		
+		@media (min-width: $min-desktop) {
+			top: 1.6rem;
+			right: -0.7rem;
+			display: block;
+			width: 0.15rem;
+			height: 0.85rem;
+		}
+	}
+}

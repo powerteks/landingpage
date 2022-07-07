@@ -1,11 +1,15 @@
 //    sizes and indents    //
-$container     : 1300px;
+$container     : 940px;
 
-$indent-mobile : 15px;
-$indent-desktop: 20px;
+$indent        : 1rem;
+// $indent-mobile : 1rem;
+// $indent-desktop: 1rem;
+
+
+$font-size-main: 18px;
 
 //          media          //
-$desktop: 1300px + 100;
+$desktop: 940px + $font-size-main * 3;
 $tablet : 768px;
 
 $min-desktop: $desktop;
@@ -17,17 +21,17 @@ $max-tablet : $tablet - 1;
 $font-family: Gilroy, "Arial", sans-serif;
 // $font-family-2    : "Arial", sans-serif;
 $font-size  : 1rem;
-$line-height: 1.5;
+$line-height: 1.2;
 
 //          color          //
-$color      : #fff;
-$dark-color : #fff;
-$light-color: #fff;
+$color      : #F6F6F6;
+$dark-color : #070707;
+$light-color: #E5E5E5;
 $color-body : #fff;
 
-$color-text      : #fff;
-$dark-color-text : #fff;
-$light-color-text: #fff;
+$color-text      : #000000;
+// $dark-color-text : #fff;
+$light-color-text: #828282;
 //         another         //
 
 //          mixins         //

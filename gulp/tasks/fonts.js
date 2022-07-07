@@ -33,55 +33,16 @@ export const ttfToWoff = () => {
 		.pipe(app.gulp.dest(`${app.path.build.fonts}`))
 }
 
-// export const fontsStyle = () => {
-// 	let fontsfile = `${app.path.srcfolder}/scss/fonts.scss`;
-
-// 	fs.readdir(app.path.build.fonts, function (err, fontsfiles) {
-// 		if (fontsfiles) {
-// 			if (!fs.existsSync(fontsfile)) {
-// 				fs.writeFile(fontsfile, '', cb);
-// 				let newfileonly;
-
-// 				for (var i = 0; i < fontsfiles.length; i++) {
-// 					let fontfilename = fontsfiles[i].split('.')[0];
-
-// 					if (newfileonly !== fontfilename) {
-// 						let fontname = fontfilename.split('-')[0] ? fontfilename.split('-')[0] : fontfilename;
-// 						let fontweight = fontfilename.split('-')[1] ? fontfilename.split('-')[1] : fontfilename;
-
-// 						if (fontweight.toLowerCase() === 'thin') {
-// 							fontweight = 100;
-// 						} else if (fontweight.toLowerCase() === 'extralight') {
-// 							fontweight = 200;
-// 						} else if (fontweight.toLowerCase() === 'light') {
-// 							fontweight = 300;
-// 						} else if (fontweight.toLowerCase() === 'medium') {
-// 							fontweight = 500;
-// 						} else if (fontweight.toLowerCase() === 'samibold') {
-// 							fontweight = 600;
-// 						} else if (fontweight.toLowerCase() === 'bold') {
-// 							fontweight = 700;
-// 						} else if (fontweight.toLowerCase() === 'extrabold' ||
-// 							fontweight.toLowerCase() === 'heavy') {
-// 							fontweight = 800;
-// 						} else if (fontweight.toLowerCase() === 'black') {
-// 							fontweight = 900;
-// 						} else {
-// 							fontweight = 400;
-// 						}
-// 						fs.appendFile(fontsfile, `@font-face {\n\tfont-family: ${fontname};\n\tfont-display: swap;\n\tsrc: url("../fonts/${fontfilename}.woff2") format("woff2"), url("../fonts/${fontfilename}.woff") format("woff");\n\tfont-weight: ${fontweight};\n\tfont-style: normal;\n}\r\n`, cb);
-// 						newfileonly = fontfilename;
-// 					}
-// 				}
-// 			} else {
-// 				console.log("файл scss/fonts.scss уже существует. для обновления файла нужно его удалить ")
-// 			}
-// 		}
-// 	});
-
-// 	return app.gulp.src(`${app.path.srcFolder}`);
-// 	function cb() { }
-// }
+export const woff = () => {
+	return app.gulp.src(`${app.path.srcFolder}/fonts/*.{woff,woff2}`, {})
+	.pipe(app.plugins.plumber(
+		app.plugins.notify.onError({
+			title: "FONTS",
+			message: "Error: <%= error.message %>"
+		})
+	))
+	.pipe(app.gulp.dest(`${app.path.build.fonts}`))
+}
 
 export const fontsStyle = () => {
 	let fontsFile = `${app.path.srcFolder}/scss/fonts.scss`;

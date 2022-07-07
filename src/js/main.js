@@ -6,10 +6,12 @@ console.log('Hello World');
 
 () => { body.classList.remove('no-js'); }
 
-// import * as flsFunctions from "./modules/supportwebp.js";
-// import { smoothScroll } from "./modules/smoothscroll.js";
-// import { scrollUp } from "./modules/scrollup.js";
+import * as flsFunctions from "./modules/supportwebp.js";
+import { burgerMenu } from "./modules/burgermenu.js";
+import { smoothScroll } from "./modules/smoothscroll.js";
+import { scrollUp } from "./modules/scrollup.js";
 
-// flsFunctions.isWebp();
-// smoothScroll();
-// scrollUp('scrollup', '_show');
+flsFunctions.isWebp();
+burgerMenu('navbar__container', 'navbar__button-toggle', 'navbar__button');
+smoothScroll();
+scrollUp('scrollup', '_show');
