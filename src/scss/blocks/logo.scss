@@ -1,5 +1,6 @@
 .logo {
-	padding: 2.2rem 1.44rem 2rem;
+	position: relative;
+	padding : 2.2rem 1.44rem 2rem;
 
 	@media (min-width: $min-desktop) {
 		padding: 0;
@@ -11,15 +12,32 @@
 }
 
 .logo__link {
-	margin-right: 16.5rem;
+	margin-right   : 16.5rem;
 	text-decoration: none;
 	font-size      : 2.61rem;
 	font-weight    : bold;
 	line-height    : 1.24;
 	color          : $color-text;
 	
+	&:focus,
+	&:hover {
+		color     : $light-color-text;
+		box-shadow: none;
+	}
+	
+	&:active {
+		transform: scale(.9);
+	}
+
 	@media (min-width: $min-desktop) {
 		display: inline-block;
+	}
+	
+	&::before {
+		position: absolute;
+		z-index : z('logo__link::before');
+		content : '';
+		inset   : 0;
 	}
 }
 

@@ -6,10 +6,10 @@
 	box-sizing      : border-box;
 	transition      : .5s;
 	background-color: $color-body;
-
 	
 	@media (max-width: $max-desktop) {
 		position: fixed;
+		z-index : 1;
 		top     : 0;
 		right   : 0;
 		bottom  : 0;
@@ -34,11 +34,21 @@
 
 .navbar__menu {
 	height: 100%;
+	
+	@media (min-width: $min-desktop) {
+		position        : fixed;
+		z-index         : 6;
+		top             : 0;
+		right           : 0;
+		left            : 0;
+		height          : auto;
+		background-color: $color-body;
+	}
 }
 
 .navbar__button-toggle {
 	position        : absolute;
-	z-index         : 5;
+	z-index         : z('navbar__button-toggle');
 	top             : 1.4rem;
 	right           : 0;
 	width           : calc(1.89rem * 1.24);
@@ -82,7 +92,7 @@
 
 
 .navbar__button-toggle_close {
-	transition      : .3;
+	transition      : .3s;
 
 	& i {
 		background-color: transparent;
@@ -103,14 +113,19 @@
 	@include reset-list;
 	
 	@media (min-width: $min-desktop) {
-		@include flex(row, stretch);
-
+		width        : $container;
+		margin       : 0 auto;
 		border-bottom: 1px solid $light-color-text;
+		@include flex(row, stretch);
 	}
 }
 
 .navbar__item {
-	width: 20%;
+	
+	@media (min-width: $min-desktop) {
+		width: 20%;
+	}
+	
 	
 	&:focus,
 	&:hover {
@@ -130,16 +145,16 @@
 
 	
 	@media (min-width: $min-desktop) {
-		font-size : 1rem;
 		text-align: center;
-	}
+		font-size : 1rem;
 
-	.navbar__item:first-child & {
-		text-align: left;
-	}
+		.navbar__item:first-child & {
+			text-align: left;
+		}
 
-	.navbar__item:last-child & {
-		text-align: right;
+		.navbar__item:last-child & {
+			text-align: right;
+		}
 	}
 	
 	&:focus,
@@ -153,7 +168,7 @@
 	}
 
 	&_active {
-		color      : $color-text;
+		color: $color-text;
 		
 		&:focus,
 		&:hover {
@@ -163,36 +178,40 @@
 }
 
 .navbar__list_language {
-
-	position : absolute;
-	top      : 100vh;
-	right    : 0;
-	transform: rotate(90deg) translate(-100%, -2.1rem);
+	position        : absolute;
+	z-index         : z('navbar__list_language');
+	right           : 0;
+	bottom          : 0;
+	transform       : rotate(90deg) translate(0, 0.5rem);
+	transform-origin: top right;
 	@include reset-list;
 	
 	@media (min-width: $min-desktop) {
-	
-		border   : none;
-		top      : auto;
-		bottom   : 2rem;
-		transform: rotate(-90deg) translate(-140%, 50%);
+		top             : auto;
+		bottom          : 1rem;
+		width           : auto;
+		transform       : rotate(-90deg) translate(-2rem, 0.8rem);
+		transform-origin: bottom right;
+		border          : none;
 	}
 }
 
 .navbar__item_language {
 	position      : relative;
 	display       : inline-block;
-	margin-right  : 1rem;
 	text-transform: uppercase;
 	
 	@media (min-width: $min-desktop) {
-		margin-right: 0.95rem;
+		width       : auto;
+		// margin-right: 0.95rem;
+		padding     : 0;
 	}
 
 	&:not(:last-child)::after {
 		position        : absolute;
-		top             : 1.85rem;
-		right           : -0.7rem;
+		z-index         : 1;
+		top             : 1rem;
+		right           : -0.3rem;
 		display         : block;
 		width           : 0.22rem;
 		height          : 1.8rem;
@@ -200,11 +219,15 @@
 		background-color: $color-text;
 		
 		@media (min-width: $min-desktop) {
-			top: 1.6rem;
-			right: -0.7rem;
+			top    : 0.7rem;
+			right  : -0.1rem;
 			display: block;
-			width: 0.15rem;
-			height: 0.85rem;
+			width  : 0.15rem;
+			height : 1rem;
 		}
+	}
+
+	.navbar__button_language {
+		padding: 0.5rem;
 	}
 }
