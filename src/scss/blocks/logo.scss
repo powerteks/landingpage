@@ -1,18 +1,32 @@
 .logo {
-	position: relative;
-	padding : 2.2rem 1.44rem 2rem;
+	position  : relative;
+	padding   : 2.2rem 1.44rem 2rem;
+	transition: .2s;
 
-	@media (min-width: $min-desktop) {
-		padding: 0;
+	.header_fixed & {
+		padding   : 0.5rem 1.44rem;
+		transition: .2s;
+		
+		@media (min-width: $min-desktop) {
+			padding: 0;
+		}
 	}
 
 	& span {
 		display: block;
 	}
+	
+	.header_fixed & span {
+		display   : inline-block;
+		transition: .2s;
+	}
+
+	@media (min-width: $min-desktop) {
+		padding: 0;
+	}
 }
 
 .logo__link {
-	margin-right   : 16.5rem;
 	text-decoration: none;
 	font-size      : 2.61rem;
 	font-weight    : bold;
@@ -28,10 +42,6 @@
 	&:active {
 		transform: scale(.9);
 	}
-
-	@media (min-width: $min-desktop) {
-		display: inline-block;
-	}
 	
 	&::before {
 		position: absolute;
@@ -39,12 +49,32 @@
 		content : '';
 		inset   : 0;
 	}
+
+	@media (min-width: $min-desktop) {
+		display     : inline-block;
+		margin-right: 16.5rem;
+		transition  : .2s;
+
+		.header_fixed & {
+			margin-right: 8.5rem;
+			padding     : 0.2rem 0;
+			transition  : .2s;
+		}
+	}
 }
 
+.logo__text {
+	margin-bottom: 0;
+	transition   : .2s;
 
-@media (min-width: $min-desktop) {
+	@media (min-width: $min-desktop) {
+		display   : inline-block;
+		transition: .2s;
+		transform : translateY(-0.55rem);
+	}
 
-	.logo__text {
-		display: inline-block;
+	.header_fixed & {
+		margin-top: 0;
+		transition: .2s;
 	}
 }

@@ -58,11 +58,12 @@ $light-color-text: #828282;
 }
 
 $z-indexes: (
+	'header'                      : 1,
 	'navbar__item_language::after': 1,
-	'navbar__container'           : 1,
-	'navbar__menu'                : 6,
-	'navbar__button-toggle'       : 5,
+	'navbar__container'           : 2,
 	'navbar__list_language'       : 5,
+	'navbar__menu'                : 6,
+	'navbar__button-toggle'       : 10,
 	'logo__link::before'          : 1,
 	'focus'                       : 99,
 );

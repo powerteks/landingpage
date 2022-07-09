@@ -1,0 +1,100 @@
+.slider {
+	position: relative;
+	overflow: hidden;
+	width   : 316px;
+	height  : auto;
+	margin  : 0 auto;
+	
+	@media (min-width: $min-desktop) {
+		width : $container;
+	}
+}
+
+.slider__list {
+	@include reset-list;
+	@include flex(row);
+}
+
+.slider__picture .image {
+	width : 316px;
+	
+	@media (min-width: $min-desktop) {
+		width: $container;
+	}
+}
+
+.slider__nav {
+	display: none;
+	
+	@media (min-width: $min-desktop) {
+		display: block;
+	}
+}
+
+.slider__button {
+	position        : absolute;
+	top             : 0;
+	width           : 7%;
+	height          : 100%;
+	border          : none;
+	background-color: transparent;
+	
+	&::before,
+	&::after {
+		position    : absolute;
+		top         : 50%;
+		display     : block;
+		width       : 2rem;
+		height      : 2rem;
+		content     : "";
+		transition  : .3s;
+		transform   : rotate(45deg) translate(0, -70%);
+		opacity     : 0;
+		border      : 0.3rem solid $color-text;
+		border-top  : none;
+		border-right: none;
+	}
+
+	&::before {
+		width       : 2.02rem;
+		height      : 2.02rem;
+		transform   : rotate(45deg) translate(-5%, -65%);
+		border      : 0.45rem solid $color-body;
+		border-top  : none;
+		border-right: none;
+	}
+	
+	&:focus,
+	&:hover {
+		box-shadow: none;
+	}
+
+	.slider:focus &::before,
+	.slider:focus &::after,
+	.slider:hover &::before,
+	.slider:hover &::after {
+		transition: .3s;
+		opacity   : 1;
+	}
+
+	&:focus::before,
+	&:hover::before {
+		transition: .3s;
+		transform : rotate(45deg) translate(-5%, -65%) scale(1.2);
+	}
+
+	&:focus::after,
+	&:hover::after {
+		transition: .3s;
+		transform : rotate(45deg) translate(-0%, -70%) scale(1.2);
+	}
+
+	&_prev {
+		left: 0;
+	}
+
+	&_next {
+		right    : 0;
+		transform: rotate(180deg);
+	}
+}

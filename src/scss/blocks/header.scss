@@ -1,10 +1,21 @@
+.header {
+	position        : fixed;
+	z-index         : z('header');
+	top             : 0;
+	right           : 0;
+	left            : 0;
+	background-color: $color-body;
+}
 
 @media (min-width: $min-desktop) {
 
 	.header__logo {
-		margin-top: 5.65rem;
+		margin-top: 1.3rem;
+		transition: .2s;
+
+		.header_fixed & {
+			margin-top: 0;
+			transition: .2s;
+		}
 	}
-}
-main {
-	height: 1000px;
 }

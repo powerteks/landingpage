@@ -5,10 +5,10 @@ html {
 }
 
 body {
-
+	@include reset-indent;
+	
 	color           : $color-text;
 	background-color: $color-body;
-	@include reset-indent;
 }
 
 *:focus {
@@ -33,10 +33,15 @@ body {
 	width     : 100%;
 	margin    : 0;
 	padding   : 0;
+
+	&_slider {
+		padding: 0 30px;
+	}
 	
 	@media (min-width: $min-desktop) {
-		width : $container;
-		margin: 0 auto;
+		width  : $container;
+		margin : 0 auto;
+		padding: 0;
 	}
 }
 
