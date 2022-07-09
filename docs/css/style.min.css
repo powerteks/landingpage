@@ -63,6 +63,10 @@ img {
   vertical-align: bottom;
 }
 
+main {
+  margin-top: 250px;
+}
+
 .header {
   position: fixed;
   z-index: 1;
