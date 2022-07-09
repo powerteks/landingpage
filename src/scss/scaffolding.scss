@@ -49,6 +49,40 @@ img {
 	vertical-align: bottom;
 }
 
-main {
+.main {
+	min-height: 2000px;
 	margin-top: calc( 220px + 30px );
+}
+
+.wrapper {
+	margin-top      : 4.61rem;
+	padding         : 3.34rem 1.67rem;
+	background-color: $color;
+	
+	@media (min-width: $min-desktop) {
+	
+		padding: 5.675rem 0;
+	}
+}
+
+.title {
+	text-align : center;
+	font-family: $font-family;
+	font-size  : 1.89rem;
+	font-weight: bold;
+	color      : $color-text;
+}
+
+.text {
+	text-align : center;
+	font-family: $font-family;
+	color      : $color-text;
+	
+	@media (min-width: $min-desktop) {
+	
+		&_about {
+			width : 50%;
+			margin: 1rem auto;
+		}
+	}
 }

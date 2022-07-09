@@ -11,7 +11,7 @@ export const smoothScroll = () => {
 			if (document.getElementById(blockID) != null) {
 				document.getElementById(blockID).scrollIntoView({
 					behavior: "smooth",
-					block: "start",
+					block: "center",
 				});
 			}
 		});

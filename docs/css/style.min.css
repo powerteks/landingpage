@@ -22,7 +22,7 @@ body {
   margin: 0;
   padding: 0;
   color: #000000;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 *:focus {
@@ -63,8 +63,40 @@ img {
   vertical-align: bottom;
 }
 
-main {
+.main {
+  min-height: 2000px;
   margin-top: 250px;
+}
+
+.wrapper {
+  margin-top: 4.61rem;
+  padding: 3.34rem 1.67rem;
+  background-color: #F6F6F6;
+}
+@media (min-width: 994px) {
+  .wrapper {
+    padding: 5.675rem 0;
+  }
+}
+
+.title {
+  text-align: center;
+  font-family: Gilroy, "Arial", sans-serif;
+  font-size: 1.89rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.text {
+  text-align: center;
+  font-family: Gilroy, "Arial", sans-serif;
+  color: #000000;
+}
+@media (min-width: 994px) {
+  .text_about {
+    width: 50%;
+    margin: 1rem auto;
+  }
 }
 
 .header {
@@ -73,7 +105,7 @@ main {
   top: 0;
   right: 0;
   left: 0;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 @media (min-width: 994px) {
@@ -93,7 +125,7 @@ main {
 .navbar__container {
   box-sizing: border-box;
   transition: 0.5s;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 @media (max-width: 993px) {
   .navbar__container {
@@ -225,7 +257,7 @@ main {
   font-weight: bold;
   line-height: 1.24;
   color: #828282;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 @media (min-width: 994px) {
   .navbar__button {
@@ -468,7 +500,7 @@ main {
   width: 2.02rem;
   height: 2.02rem;
   transform: rotate(45deg) translate(-5%, -65%);
-  border: 0.45rem solid #fff;
+  border: 0.45rem solid #ffffff;
   border-top: none;
   border-right: none;
 }

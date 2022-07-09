@@ -9,7 +9,7 @@
 		<script src="js/main.min.js" defer></script>
 	</head>
 	<body>
-		<header>
+		<header id="home">
 			<div class="header">
 				<div class="container">
 					<div class="navbar">
@@ -17,7 +17,7 @@
 					<div class="navbar__container">
 						<nav class="navbar__menu">
 							<ul class="navbar__list">
-								<li class="navbar__item"><a class="navbar__button navbar__button_active">Home</a></li>
+								<li class="navbar__item"><a href="#home" class="navbar__button">Home</a></li>
 								<li class="navbar__item"><a href="#about" class="navbar__button">About me</a></li>
 								<li class="navbar__item"><a href="#skills" class="navbar__button">Skills</a></li>
 								<li class="navbar__item"><a href="#portfolio" class="navbar__button">Portfolio</a></li>
@@ -32,7 +32,7 @@
 				</div>
 					<div class="header__logo">
 						<div class="logo">
-							<a href="/" class="logo__link"><span>Denis</span> <span>Novik</span></a>
+							<a href="#home" class="logo__link"><span>Denis</span> <span>Novik</span></a>
 							<p class="logo__text"><span>UX | UI designer</span> <span>24 years old, Minsk</span></p>
 						</div>
 					</div>
@@ -84,6 +84,14 @@
 						<button class="slider__button slider__button_prev"></button>
 						<button class="slider__button slider__button_next"></button>
 					</div>
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="container" id="about">
+					<h2 class="title">About me</h2>
+					<p class="text text_about">Hi, I'm Denis – UX/UI designer from Minsk. I'm&nbsp;interested&nbsp;in design and everything connected with it.</p>
+					<p class="text text_about">I'm studying at courses "Web and mobile design interfaces" in IT-Academy.</p>
+					<p class="text text_about">Ready to implement excellent projects with&nbsp;wonderful&nbsp;people.</p>
 				</div>
 			</div>
 		</main>
