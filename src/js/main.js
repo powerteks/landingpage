@@ -24,6 +24,7 @@ const slider = new Swiper('.slider', {
 	wrapperClass: 'slider__list',
 	slideClass  : 'slider__item',
 	direction   : 'horizontal',
+	slidesPerView: 1,
 	loop        : true,
 	speed       : 500,
 	autoplay: {
