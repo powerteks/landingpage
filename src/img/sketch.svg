@@ -1,0 +1,10 @@
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+<g fill-rule="evenodd" clip-rule="evenodd">
+	<path d="M20.25 37.022l29.746 58.22L0 37.022zM79.75 37.022l-29.746 58.22L100 37.022z" fill="#ea6c00"/>
+	<path d="M20.25 37.022h59.49l-29.745 58.22z" fill="#fdad00"/>
+	<path d="M48.386.424l-26.9 2.843-1.494 27.957z" fill="#fdd231" transform="matrix(1.04758 0 0 1.04759 -.693 4.314)" clip-path="url(#prefix__a)"/>
+	<path d="M48.386.424l26.9 2.843 1.493 27.957z" fill="#fdd231" transform="matrix(1.04758 0 0 1.04759 -.693 4.314)" clip-path="url(#prefix__b)"/>
+	<path d="M96.12 31.224L75.294 3.268l1.495 27.956z" fill="#fdad00" transform="matrix(1.04758 0 0 1.04759 -.693 4.314)" clip-path="url(#prefix__c)"/>
+	<path d="M.662 31.224L21.488 3.268l-1.495 27.956z" fill="#fdad00" transform="matrix(1.04758 0 0 1.04759 -.693 4.314)" clip-path="url(#prefix__d)"/>
+	<path d="M48.386.424l-28.394 30.8H76.78z" fill="#feeeb7" transform="matrix(1.04758 0 0 1.04759 -.693 4.314)" clip-path="url(#prefix__e)"/>
+</g></svg>

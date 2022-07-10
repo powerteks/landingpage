@@ -50,7 +50,6 @@ img {
 }
 
 .main {
-	min-height: 2000px;
 	margin-top: calc( 220px + 30px );
 }
 
@@ -60,8 +59,7 @@ img {
 	background-color: $color;
 	
 	@media (min-width: $min-desktop) {
-	
-		padding: 5.675rem 0;
+		padding: 4.075rem 0 3.5rem;
 	}
 }
 
@@ -81,8 +79,8 @@ img {
 	@media (min-width: $min-desktop) {
 	
 		&_about {
-			width : 50%;
-			margin: 1rem auto;
+			width : 51%;
+			margin: 1rem auto 1.85rem;
 		}
 	}
 }

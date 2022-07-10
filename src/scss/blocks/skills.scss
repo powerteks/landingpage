@@ -1,0 +1,67 @@
+.title_skills {
+	margin-top: 4.5rem;
+}
+
+.skills__list {
+	@include reset-list;
+	@include flex(column);
+
+	align-items  : center;
+	margin-bottom: 6.11rem;
+	
+	@media (min-width: $min-desktop) {
+		@include flex(row, space-evenly);
+	}
+}
+
+.skills__item {
+	margin-top: 4.4rem;
+	
+	@media (min-width: $min-desktop) {
+	
+		&:not(:last-child) {
+			margin-right: 4.9rem;
+		}
+	}
+}
+
+.skills__figure {
+	margin: 0;
+}
+
+.skills__img {
+	display: block;
+	width  : 89px;
+	height : auto;
+	margin : 0 auto;
+}
+
+.skills__name {
+	display    : block;
+	width      : 4.5rem;
+	margin     : 1.25rem auto 2rem;
+	text-align : center;
+	font-size  : 0.78rem;
+	font-weight: bold;
+	color      : $light-color-text;
+}
+
+.skills__rating .skills__star {
+	width       : 1.35rem;
+	height      : auto;
+	margin-right: 0.44rem;
+	fill        : $light-color;
+	
+	@media (min-width: $min-desktop) {
+		width       : 1.2rem;
+		margin-right: 0.47rem;
+	}
+}
+
+.skills__rating_1 .skills__star:first-child, .skills__rating_2 .skills__star:first-child, .skills__rating_3 .skills__star:first-child, .skills__rating_4 .skills__star:first-child, .skills__rating_5 .skills__star:first-child,
+.skills__rating_2 .skills__star:nth-child(2), .skills__rating_3 .skills__star:nth-child(2), .skills__rating_4 .skills__star:nth-child(2), .skills__rating_5 .skills__star:nth-child(2),
+.skills__rating_3 .skills__star:nth-child(3), .skills__rating_4 .skills__star:nth-child(3), .skills__rating_5 .skills__star:nth-child(3),
+.skills__rating_4 .skills__star:nth-child(4), .skills__rating_5 .skills__star:nth-child(4),
+.skills__rating_5 .skills__star:nth-child(5) {
+	fill: $color-text;
+}

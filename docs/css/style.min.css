@@ -64,7 +64,6 @@ img {
 }
 
 .main {
-  min-height: 2000px;
   margin-top: 250px;
 }
 
@@ -75,7 +74,7 @@ img {
 }
 @media (min-width: 994px) {
   .wrapper {
-    padding: 5.675rem 0;
+    padding: 4.075rem 0 3.5rem;
   }
 }
 
@@ -94,8 +93,8 @@ img {
 }
 @media (min-width: 994px) {
   .text_about {
-    width: 50%;
-    margin: 1rem auto;
+    width: 51%;
+    margin: 1rem auto 1.85rem;
   }
 }
 
@@ -525,4 +524,77 @@ img {
 .slider__button_next {
   right: 0;
   transform: rotate(180deg);
+}
+
+.title_skills {
+  margin-top: 4.5rem;
+}
+
+.skills__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 6.11rem;
+}
+@media (min-width: 994px) {
+  .skills__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+.skills__item {
+  margin-top: 4.4rem;
+}
+@media (min-width: 994px) {
+  .skills__item:not(:last-child) {
+    margin-right: 4.9rem;
+  }
+}
+
+.skills__figure {
+  margin: 0;
+}
+
+.skills__img {
+  display: block;
+  width: 89px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.skills__name {
+  display: block;
+  width: 4.5rem;
+  margin: 1.25rem auto 2rem;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: bold;
+  color: #828282;
+}
+
+.skills__rating .skills__star {
+  width: 1.35rem;
+  height: auto;
+  margin-right: 0.44rem;
+  fill: #E5E5E5;
+}
+@media (min-width: 994px) {
+  .skills__rating .skills__star {
+    width: 1.2rem;
+    margin-right: 0.47rem;
+  }
+}
+
+.skills__rating_1 .skills__star:first-child, .skills__rating_2 .skills__star:first-child, .skills__rating_3 .skills__star:first-child, .skills__rating_4 .skills__star:first-child, .skills__rating_5 .skills__star:first-child,
+.skills__rating_2 .skills__star:nth-child(2), .skills__rating_3 .skills__star:nth-child(2), .skills__rating_4 .skills__star:nth-child(2), .skills__rating_5 .skills__star:nth-child(2),
+.skills__rating_3 .skills__star:nth-child(3), .skills__rating_4 .skills__star:nth-child(3), .skills__rating_5 .skills__star:nth-child(3),
+.skills__rating_4 .skills__star:nth-child(4), .skills__rating_5 .skills__star:nth-child(4),
+.skills__rating_5 .skills__star:nth-child(5) {
+  fill: #000000;
 }
