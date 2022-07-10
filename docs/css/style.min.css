@@ -105,6 +105,11 @@ img {
   right: 0;
   left: 0;
   background-color: #ffffff;
+  transition: 0.5s;
+}
+.header_fixed {
+  box-shadow: 0 0 10px #828282;
+  transition: 0.5s;
 }
 
 @media (min-width: 994px) {
@@ -597,4 +602,70 @@ img {
 .skills__rating_4 .skills__star:nth-child(4), .skills__rating_5 .skills__star:nth-child(4),
 .skills__rating_5 .skills__star:nth-child(5) {
   fill: #000000;
+}
+
+.portfolio__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.portfolio__figure {
+  margin: 0;
+  margin-top: 3.56rem;
+}
+
+.portfolio__link {
+  display: block;
+  margin-top: 1.72rem;
+  margin-bottom: 4.22rem;
+  text-align: center;
+  text-decoration: none;
+  font-family: Gilroy, "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #000000;
+}
+@media (min-width: 994px) {
+  .portfolio__link {
+    margin-top: 2.5rem;
+    margin-bottom: 5.3rem;
+  }
+}
+.portfolio__link:focus, .portfolio__link:hover {
+  font-weight: bold;
+  box-shadow: none;
+}
+.portfolio__link:active {
+  transform: scale(0.9);
+}
+.portfolio__link span {
+  position: relative;
+}
+.portfolio__link span::after {
+  position: absolute;
+  right: 0;
+  bottom: 1px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background-color: #000000;
+}
+.portfolio__link:focus span::after, .portfolio__link:hover span::after {
+  height: 2px;
+}
+.portfolio__item:last-child .portfolio__link {
+  margin-bottom: 1.34rem;
+}
+@media (min-width: 994px) {
+  .portfolio__item:last-child .portfolio__link {
+    margin-bottom: 2rem;
+  }
+}
+
+.portfolio__image .image {
+  width: 100%;
+  height: auto;
 }

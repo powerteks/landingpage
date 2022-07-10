@@ -54,5 +54,5 @@ const slider = new Swiper('.slider', {
 	watchOverflow: true,
 });
 
-smoothScroll();
+smoothScroll(200, 300, 'home');
 scrollUp('scrollup', '_show');
