@@ -104,12 +104,12 @@ img {
   top: 0;
   right: 0;
   left: 0;
-  background-color: #ffffff;
   transition: 0.5s;
+  background-color: #ffffff;
 }
 .header_fixed {
-  box-shadow: 0 0 10px #828282;
   transition: 0.5s;
+  box-shadow: 0 0 10px #828282;
 }
 
 @media (min-width: 994px) {
@@ -167,12 +167,12 @@ img {
   width: 2.3436rem;
   height: 2.3436rem;
   margin: 1rem 1.44rem;
+  cursor: pointer;
   transition: 0.3s;
   transition: 0.2s;
   border: none;
   border-radius: 0;
   background-color: transparent;
-  cursor: pointer;
 }
 @media (min-width: 994px) {
   .navbar__button-toggle {
@@ -271,6 +271,14 @@ img {
   }
   .navbar__item:first-child .navbar__button {
     text-align: left;
+  }
+  .navbar__item:nth-child(2) .navbar__button span {
+    display: inline-block;
+    transform: translateX(-50%);
+  }
+  .navbar__item:nth-child(4) .navbar__button span {
+    display: inline-block;
+    transform: translateX(50%);
   }
   .navbar__item:last-child .navbar__button {
     text-align: right;
@@ -483,6 +491,7 @@ img {
   top: 0;
   width: 7%;
   height: 100%;
+  cursor: pointer;
   border: none;
   background-color: transparent;
 }
@@ -668,4 +677,106 @@ img {
 .portfolio__image .image {
   width: 100%;
   height: auto;
+}
+
+.contacts {
+  margin: 4.4rem 1.7rem 0;
+}
+
+@media (min-width: 994px) {
+  .title_contacts {
+    margin-top: 6.1rem;
+    margin-bottom: 1.3rem;
+  }
+}
+
+.text_contacts {
+  width: 15.3rem;
+  margin: 1rem auto 2.4rem;
+}
+@media (min-width: 994px) {
+  .text_contacts {
+    margin-bottom: 1.9rem;
+  }
+}
+
+.contacts__button {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.55rem 1.7rem;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: Gilroy, "Arial", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #ffffff;
+  border: none;
+  border-radius: 1.2rem;
+  background-color: #000000;
+}
+@media (min-width: 994px) {
+  .contacts__button {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+  }
+}
+.contacts__button:focus, .contacts__button:hover {
+  transition: 0.3s;
+  background-color: #828282;
+  box-shadow: none;
+}
+.contacts__button:active {
+  transition: 0.3s;
+  transform: scale(0.9);
+}
+
+.contacts__list {
+  margin: 2.7rem auto 2.6rem;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (min-width: 994px) {
+  .contacts__list {
+    width: 19rem;
+    margin: 4.8rem auto 2.2rem;
+  }
+}
+
+.contacts__link {
+  display: block;
+  width: 2.2rem;
+  height: 2.2rem;
+  transition: 0.3s;
+  text-decoration: none;
+  color: #000000;
+}
+.contacts__link:focus, .contacts__link:hover {
+  transition: 0.3s;
+  box-shadow: none;
+  fill: #828282;
+}
+.contacts__link:active {
+  transition: 0.3s;
+  transform: scale(0.9);
+}
+
+.contacts__context {
+  width: 17.5rem;
+  margin: 2.6rem auto 6.3rem;
+  text-align: center;
+  font-family: Gilroy, "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #828282;
+}
+@media (min-width: 994px) {
+  .contacts__context {
+    margin: 2.2rem auto 6.8rem;
+    font-size: 0.8rem;
+  }
 }

@@ -1,0 +1,103 @@
+.contacts {
+	margin: 4.4rem 1.7rem 0;
+}
+
+.title_contacts {
+
+	@media (min-width: $min-desktop) {
+		margin-top   : 6.1rem;
+		margin-bottom: 1.3rem;
+	}
+}
+
+.text_contacts {
+	width : 15.3rem;
+	margin: 1rem auto 2.4rem;
+	
+	@media (min-width: $min-desktop) {
+		margin-bottom: 1.9rem;
+	}
+}
+
+.contacts__button {
+	box-sizing      : border-box;
+	width           : 100%;
+	padding         : 0.55rem 1.7rem;
+	cursor          : pointer;
+	transition      : .3s;
+	font-family     : $font-family;
+	font-size       : 1rem;
+	font-weight     : bold;
+	line-height     : 1.2;
+	color           : $color-body;
+	border          : none;
+	border-radius   : 1.2rem;
+	background-color: $color-text;
+	
+	@media (min-width: $min-desktop) {
+		display: block;
+		width  : auto;
+		margin : 0 auto;
+	}
+	
+	&:focus,
+	&:hover {
+		transition      : .3s;
+		background-color: $light-color-text;
+		box-shadow      : none;
+	}
+	
+	&:active {
+		transition: .3s;
+		transform : scale(.9);
+	}
+}
+
+.contacts__list {
+	margin    : 2.7rem auto 2.6rem;
+	padding   : 0;
+	list-style: none;
+
+	@include flex(row, space-between);
+	
+	@media (min-width: $min-desktop) {
+		width : 19rem;
+		margin: 4.8rem auto 2.2rem;
+	}
+}
+
+.contacts__link {
+	display        : block;
+	width          : 2.2rem;
+	height         : 2.2rem;
+	transition     : .3s;
+	text-decoration: none;
+	color          : $color-text;
+	
+	&:focus,
+	&:hover {
+		transition: .3s;
+		box-shadow: none;
+		fill      : $light-color-text;
+	}
+	
+	&:active {
+		transition: .3s;
+		transform : scale(.9);
+	}
+}
+
+.contacts__context {
+	width      : 17.5rem;
+	margin     : 2.6rem auto 6.3rem;
+	text-align : center;
+	font-family: $font-family;
+	font-size  : 1rem;
+	line-height: 1.2;
+	color      : $light-color-text;
+	
+	@media (min-width: $min-desktop) {
+		margin   : 2.2rem auto 6.8rem;
+		font-size: 0.8rem;
+	}
+}
